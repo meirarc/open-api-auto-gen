@@ -1,0 +1,1944 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Northwind OData Service",
+        "version": "1.0.0",
+        "description": "Northwind OData Service"
+    },
+    "servers": [
+        {
+            "url": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+            "description": "Northwind OData Service"
+        }
+    ],
+    "paths": {
+        "/Categories": {
+            "get": {
+                "summary": "Get a list of Categories",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Categories({CategoryID})": {
+            "get": {
+                "summary": "Get a single Categories by CategoryID",
+                "parameters": [
+                    {
+                        "name": "CategoryID",
+                        "in": "path",
+                        "required": true,
+                        "description": "CategoryID of the Categories to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Category"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/CustomerDemographics": {
+            "get": {
+                "summary": "Get a list of CustomerDemographics",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of CustomerDemographics",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CustomerDemographic"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/CustomerDemographics({CustomerTypeID})": {
+            "get": {
+                "summary": "Get a single CustomerDemographics by CustomerTypeID",
+                "parameters": [
+                    {
+                        "name": "CustomerTypeID",
+                        "in": "path",
+                        "required": true,
+                        "description": "CustomerTypeID of the CustomerDemographics to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of CustomerDemographics",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomerDemographic"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Customers": {
+            "get": {
+                "summary": "Get a list of Customers",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Customers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Customer"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Customers({CustomerID})": {
+            "get": {
+                "summary": "Get a single Customers by CustomerID",
+                "parameters": [
+                    {
+                        "name": "CustomerID",
+                        "in": "path",
+                        "required": true,
+                        "description": "CustomerID of the Customers to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Customers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Customer"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Employees": {
+            "get": {
+                "summary": "Get a list of Employees",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Employees",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Employee"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Employees({EmployeeID})": {
+            "get": {
+                "summary": "Get a single Employees by EmployeeID",
+                "parameters": [
+                    {
+                        "name": "EmployeeID",
+                        "in": "path",
+                        "required": true,
+                        "description": "EmployeeID of the Employees to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Employees",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Employee"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Order_Details": {
+            "get": {
+                "summary": "Get a list of Order_Details",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Order_Details",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Order_Detail"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Order_Details({OrderID})": {
+            "get": {
+                "summary": "Get a single Order_Details by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Order_Details to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Order_Details",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order_Detail"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Orders": {
+            "get": {
+                "summary": "Get a list of Orders",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Orders",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Order"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Orders({OrderID})": {
+            "get": {
+                "summary": "Get a single Orders by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Orders to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Orders",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products": {
+            "get": {
+                "summary": "Get a list of Products",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Products",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Product"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products({ProductID})": {
+            "get": {
+                "summary": "Get a single Products by ProductID",
+                "parameters": [
+                    {
+                        "name": "ProductID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ProductID of the Products to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Products",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Product"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Regions": {
+            "get": {
+                "summary": "Get a list of Regions",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Regions",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Region"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Regions({RegionID})": {
+            "get": {
+                "summary": "Get a single Regions by RegionID",
+                "parameters": [
+                    {
+                        "name": "RegionID",
+                        "in": "path",
+                        "required": true,
+                        "description": "RegionID of the Regions to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Regions",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Region"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Shippers": {
+            "get": {
+                "summary": "Get a list of Shippers",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Shippers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Shipper"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Shippers({ShipperID})": {
+            "get": {
+                "summary": "Get a single Shippers by ShipperID",
+                "parameters": [
+                    {
+                        "name": "ShipperID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ShipperID of the Shippers to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Shippers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Shipper"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Suppliers": {
+            "get": {
+                "summary": "Get a list of Suppliers",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Suppliers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Supplier"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Suppliers({SupplierID})": {
+            "get": {
+                "summary": "Get a single Suppliers by SupplierID",
+                "parameters": [
+                    {
+                        "name": "SupplierID",
+                        "in": "path",
+                        "required": true,
+                        "description": "SupplierID of the Suppliers to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Suppliers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Supplier"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Territories": {
+            "get": {
+                "summary": "Get a list of Territories",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Territories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Territory"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Territories({TerritoryID})": {
+            "get": {
+                "summary": "Get a single Territories by TerritoryID",
+                "parameters": [
+                    {
+                        "name": "TerritoryID",
+                        "in": "path",
+                        "required": true,
+                        "description": "TerritoryID of the Territories to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Territories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Territory"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Alphabetical_list_of_products": {
+            "get": {
+                "summary": "Get a list of Alphabetical_list_of_products",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Alphabetical_list_of_products",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Alphabetical_list_of_product"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Alphabetical_list_of_products({ProductID})": {
+            "get": {
+                "summary": "Get a single Alphabetical_list_of_products by ProductID",
+                "parameters": [
+                    {
+                        "name": "ProductID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ProductID of the Alphabetical_list_of_products to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Alphabetical_list_of_products",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Alphabetical_list_of_product"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Category_Sales_for_1997": {
+            "get": {
+                "summary": "Get a list of Category_Sales_for_1997",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Category_Sales_for_1997",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category_Sales_for_1997"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Category_Sales_for_1997({CategoryName})": {
+            "get": {
+                "summary": "Get a single Category_Sales_for_1997 by CategoryName",
+                "parameters": [
+                    {
+                        "name": "CategoryName",
+                        "in": "path",
+                        "required": true,
+                        "description": "CategoryName of the Category_Sales_for_1997 to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Category_Sales_for_1997",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Category_Sales_for_1997"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Current_Product_Lists": {
+            "get": {
+                "summary": "Get a list of Current_Product_Lists",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Current_Product_Lists",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Current_Product_List"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Current_Product_Lists({ProductID})": {
+            "get": {
+                "summary": "Get a single Current_Product_Lists by ProductID",
+                "parameters": [
+                    {
+                        "name": "ProductID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ProductID of the Current_Product_Lists to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Current_Product_Lists",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Current_Product_List"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Customer_and_Suppliers_by_Cities": {
+            "get": {
+                "summary": "Get a list of Customer_and_Suppliers_by_Cities",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Customer_and_Suppliers_by_Cities",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Customer_and_Suppliers_by_City"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Customer_and_Suppliers_by_Cities({CompanyName})": {
+            "get": {
+                "summary": "Get a single Customer_and_Suppliers_by_Cities by CompanyName",
+                "parameters": [
+                    {
+                        "name": "CompanyName",
+                        "in": "path",
+                        "required": true,
+                        "description": "CompanyName of the Customer_and_Suppliers_by_Cities to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Customer_and_Suppliers_by_Cities",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Customer_and_Suppliers_by_City"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Invoices": {
+            "get": {
+                "summary": "Get a list of Invoices",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Invoices",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Invoice"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Invoices({CustomerName})": {
+            "get": {
+                "summary": "Get a single Invoices by CustomerName",
+                "parameters": [
+                    {
+                        "name": "CustomerName",
+                        "in": "path",
+                        "required": true,
+                        "description": "CustomerName of the Invoices to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Invoices",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Invoice"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Order_Details_Extendeds": {
+            "get": {
+                "summary": "Get a list of Order_Details_Extendeds",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Order_Details_Extendeds",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Order_Details_Extended"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Order_Details_Extendeds({OrderID})": {
+            "get": {
+                "summary": "Get a single Order_Details_Extendeds by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Order_Details_Extendeds to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Order_Details_Extendeds",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order_Details_Extended"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Order_Subtotals": {
+            "get": {
+                "summary": "Get a list of Order_Subtotals",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Order_Subtotals",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Order_Subtotal"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Order_Subtotals({OrderID})": {
+            "get": {
+                "summary": "Get a single Order_Subtotals by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Order_Subtotals to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Order_Subtotals",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order_Subtotal"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Orders_Qries": {
+            "get": {
+                "summary": "Get a list of Orders_Qries",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Orders_Qries",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Orders_Qry"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Orders_Qries({OrderID})": {
+            "get": {
+                "summary": "Get a single Orders_Qries by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Orders_Qries to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Orders_Qries",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Orders_Qry"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Product_Sales_for_1997": {
+            "get": {
+                "summary": "Get a list of Product_Sales_for_1997",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Product_Sales_for_1997",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Product_Sales_for_1997"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Product_Sales_for_1997({CategoryName})": {
+            "get": {
+                "summary": "Get a single Product_Sales_for_1997 by CategoryName",
+                "parameters": [
+                    {
+                        "name": "CategoryName",
+                        "in": "path",
+                        "required": true,
+                        "description": "CategoryName of the Product_Sales_for_1997 to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Product_Sales_for_1997",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Product_Sales_for_1997"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products_Above_Average_Prices": {
+            "get": {
+                "summary": "Get a list of Products_Above_Average_Prices",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Products_Above_Average_Prices",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Products_Above_Average_Price"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products_Above_Average_Prices({ProductName})": {
+            "get": {
+                "summary": "Get a single Products_Above_Average_Prices by ProductName",
+                "parameters": [
+                    {
+                        "name": "ProductName",
+                        "in": "path",
+                        "required": true,
+                        "description": "ProductName of the Products_Above_Average_Prices to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Products_Above_Average_Prices",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Products_Above_Average_Price"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products_by_Categories": {
+            "get": {
+                "summary": "Get a list of Products_by_Categories",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Products_by_Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Products_by_Category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products_by_Categories({CategoryName})": {
+            "get": {
+                "summary": "Get a single Products_by_Categories by CategoryName",
+                "parameters": [
+                    {
+                        "name": "CategoryName",
+                        "in": "path",
+                        "required": true,
+                        "description": "CategoryName of the Products_by_Categories to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Products_by_Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Products_by_Category"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Sales_by_Categories": {
+            "get": {
+                "summary": "Get a list of Sales_by_Categories",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Sales_by_Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Sales_by_Category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Sales_by_Categories({CategoryID})": {
+            "get": {
+                "summary": "Get a single Sales_by_Categories by CategoryID",
+                "parameters": [
+                    {
+                        "name": "CategoryID",
+                        "in": "path",
+                        "required": true,
+                        "description": "CategoryID of the Sales_by_Categories to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Sales_by_Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Sales_by_Category"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Sales_Totals_by_Amounts": {
+            "get": {
+                "summary": "Get a list of Sales_Totals_by_Amounts",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Sales_Totals_by_Amounts",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Sales_Totals_by_Amount"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Sales_Totals_by_Amounts({OrderID})": {
+            "get": {
+                "summary": "Get a single Sales_Totals_by_Amounts by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Sales_Totals_by_Amounts to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Sales_Totals_by_Amounts",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Sales_Totals_by_Amount"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Summary_of_Sales_by_Quarters": {
+            "get": {
+                "summary": "Get a list of Summary_of_Sales_by_Quarters",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Summary_of_Sales_by_Quarters",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Summary_of_Sales_by_Quarter"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Summary_of_Sales_by_Quarters({OrderID})": {
+            "get": {
+                "summary": "Get a single Summary_of_Sales_by_Quarters by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Summary_of_Sales_by_Quarters to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Summary_of_Sales_by_Quarters",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Summary_of_Sales_by_Quarter"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Summary_of_Sales_by_Years": {
+            "get": {
+                "summary": "Get a list of Summary_of_Sales_by_Years",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Summary_of_Sales_by_Years",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Summary_of_Sales_by_Year"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Summary_of_Sales_by_Years({OrderID})": {
+            "get": {
+                "summary": "Get a single Summary_of_Sales_by_Years by OrderID",
+                "parameters": [
+                    {
+                        "name": "OrderID",
+                        "in": "path",
+                        "required": true,
+                        "description": "OrderID of the Summary_of_Sales_by_Years to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Summary_of_Sales_by_Years",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Summary_of_Sales_by_Year"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "CategoryID": {
+                        "type": "integer"
+                    },
+                    "CategoryName": {
+                        "type": "string"
+                    },
+                    "Description": {
+                        "type": "string"
+                    },
+                    "Picture": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CustomerDemographic": {
+                "type": "object",
+                "properties": {
+                    "CustomerTypeID": {
+                        "type": "string"
+                    },
+                    "CustomerDesc": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Customer": {
+                "type": "object",
+                "properties": {
+                    "CustomerID": {
+                        "type": "string"
+                    },
+                    "CompanyName": {
+                        "type": "string"
+                    },
+                    "ContactName": {
+                        "type": "string"
+                    },
+                    "ContactTitle": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "City": {
+                        "type": "string"
+                    },
+                    "Region": {
+                        "type": "string"
+                    },
+                    "PostalCode": {
+                        "type": "string"
+                    },
+                    "Country": {
+                        "type": "string"
+                    },
+                    "Phone": {
+                        "type": "string"
+                    },
+                    "Fax": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Employee": {
+                "type": "object",
+                "properties": {
+                    "EmployeeID": {
+                        "type": "integer"
+                    },
+                    "LastName": {
+                        "type": "string"
+                    },
+                    "FirstName": {
+                        "type": "string"
+                    },
+                    "Title": {
+                        "type": "string"
+                    },
+                    "TitleOfCourtesy": {
+                        "type": "string"
+                    },
+                    "BirthDate": {
+                        "type": "string"
+                    },
+                    "HireDate": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "City": {
+                        "type": "string"
+                    },
+                    "Region": {
+                        "type": "string"
+                    },
+                    "PostalCode": {
+                        "type": "string"
+                    },
+                    "Country": {
+                        "type": "string"
+                    },
+                    "HomePhone": {
+                        "type": "string"
+                    },
+                    "Extension": {
+                        "type": "string"
+                    },
+                    "Photo": {
+                        "type": "string"
+                    },
+                    "Notes": {
+                        "type": "string"
+                    },
+                    "ReportsTo": {
+                        "type": "integer"
+                    },
+                    "PhotoPath": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Order_Detail": {
+                "type": "object",
+                "properties": {
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "UnitPrice": {
+                        "type": "number"
+                    },
+                    "Quantity": {
+                        "type": "integer"
+                    },
+                    "Discount": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Order": {
+                "type": "object",
+                "properties": {
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "CustomerID": {
+                        "type": "string"
+                    },
+                    "EmployeeID": {
+                        "type": "integer"
+                    },
+                    "OrderDate": {
+                        "type": "string"
+                    },
+                    "RequiredDate": {
+                        "type": "string"
+                    },
+                    "ShippedDate": {
+                        "type": "string"
+                    },
+                    "ShipVia": {
+                        "type": "integer"
+                    },
+                    "Freight": {
+                        "type": "number"
+                    },
+                    "ShipName": {
+                        "type": "string"
+                    },
+                    "ShipAddress": {
+                        "type": "string"
+                    },
+                    "ShipCity": {
+                        "type": "string"
+                    },
+                    "ShipRegion": {
+                        "type": "string"
+                    },
+                    "ShipPostalCode": {
+                        "type": "string"
+                    },
+                    "ShipCountry": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Product": {
+                "type": "object",
+                "properties": {
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "SupplierID": {
+                        "type": "integer"
+                    },
+                    "CategoryID": {
+                        "type": "integer"
+                    },
+                    "QuantityPerUnit": {
+                        "type": "string"
+                    },
+                    "UnitPrice": {
+                        "type": "number"
+                    },
+                    "UnitsInStock": {
+                        "type": "integer"
+                    },
+                    "UnitsOnOrder": {
+                        "type": "integer"
+                    },
+                    "ReorderLevel": {
+                        "type": "integer"
+                    },
+                    "Discontinued": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Region": {
+                "type": "object",
+                "properties": {
+                    "RegionID": {
+                        "type": "integer"
+                    },
+                    "RegionDescription": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Shipper": {
+                "type": "object",
+                "properties": {
+                    "ShipperID": {
+                        "type": "integer"
+                    },
+                    "CompanyName": {
+                        "type": "string"
+                    },
+                    "Phone": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Supplier": {
+                "type": "object",
+                "properties": {
+                    "SupplierID": {
+                        "type": "integer"
+                    },
+                    "CompanyName": {
+                        "type": "string"
+                    },
+                    "ContactName": {
+                        "type": "string"
+                    },
+                    "ContactTitle": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "City": {
+                        "type": "string"
+                    },
+                    "Region": {
+                        "type": "string"
+                    },
+                    "PostalCode": {
+                        "type": "string"
+                    },
+                    "Country": {
+                        "type": "string"
+                    },
+                    "Phone": {
+                        "type": "string"
+                    },
+                    "Fax": {
+                        "type": "string"
+                    },
+                    "HomePage": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Territory": {
+                "type": "object",
+                "properties": {
+                    "TerritoryID": {
+                        "type": "string"
+                    },
+                    "TerritoryDescription": {
+                        "type": "string"
+                    },
+                    "RegionID": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "Alphabetical_list_of_product": {
+                "type": "object",
+                "properties": {
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "SupplierID": {
+                        "type": "integer"
+                    },
+                    "CategoryID": {
+                        "type": "integer"
+                    },
+                    "QuantityPerUnit": {
+                        "type": "string"
+                    },
+                    "UnitPrice": {
+                        "type": "number"
+                    },
+                    "UnitsInStock": {
+                        "type": "integer"
+                    },
+                    "UnitsOnOrder": {
+                        "type": "integer"
+                    },
+                    "ReorderLevel": {
+                        "type": "integer"
+                    },
+                    "Discontinued": {
+                        "type": "boolean"
+                    },
+                    "CategoryName": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Category_Sales_for_1997": {
+                "type": "object",
+                "properties": {
+                    "CategoryName": {
+                        "type": "string"
+                    },
+                    "CategorySales": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Current_Product_List": {
+                "type": "object",
+                "properties": {
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Customer_and_Suppliers_by_City": {
+                "type": "object",
+                "properties": {
+                    "City": {
+                        "type": "string"
+                    },
+                    "CompanyName": {
+                        "type": "string"
+                    },
+                    "ContactName": {
+                        "type": "string"
+                    },
+                    "Relationship": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Invoice": {
+                "type": "object",
+                "properties": {
+                    "ShipName": {
+                        "type": "string"
+                    },
+                    "ShipAddress": {
+                        "type": "string"
+                    },
+                    "ShipCity": {
+                        "type": "string"
+                    },
+                    "ShipRegion": {
+                        "type": "string"
+                    },
+                    "ShipPostalCode": {
+                        "type": "string"
+                    },
+                    "ShipCountry": {
+                        "type": "string"
+                    },
+                    "CustomerID": {
+                        "type": "string"
+                    },
+                    "CustomerName": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "City": {
+                        "type": "string"
+                    },
+                    "Region": {
+                        "type": "string"
+                    },
+                    "PostalCode": {
+                        "type": "string"
+                    },
+                    "Country": {
+                        "type": "string"
+                    },
+                    "Salesperson": {
+                        "type": "string"
+                    },
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "OrderDate": {
+                        "type": "string"
+                    },
+                    "RequiredDate": {
+                        "type": "string"
+                    },
+                    "ShippedDate": {
+                        "type": "string"
+                    },
+                    "ShipperName": {
+                        "type": "string"
+                    },
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "UnitPrice": {
+                        "type": "number"
+                    },
+                    "Quantity": {
+                        "type": "integer"
+                    },
+                    "Discount": {
+                        "type": "number"
+                    },
+                    "ExtendedPrice": {
+                        "type": "number"
+                    },
+                    "Freight": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Order_Details_Extended": {
+                "type": "object",
+                "properties": {
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "UnitPrice": {
+                        "type": "number"
+                    },
+                    "Quantity": {
+                        "type": "integer"
+                    },
+                    "Discount": {
+                        "type": "number"
+                    },
+                    "ExtendedPrice": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Order_Subtotal": {
+                "type": "object",
+                "properties": {
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "Subtotal": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Orders_Qry": {
+                "type": "object",
+                "properties": {
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "CustomerID": {
+                        "type": "string"
+                    },
+                    "EmployeeID": {
+                        "type": "integer"
+                    },
+                    "OrderDate": {
+                        "type": "string"
+                    },
+                    "RequiredDate": {
+                        "type": "string"
+                    },
+                    "ShippedDate": {
+                        "type": "string"
+                    },
+                    "ShipVia": {
+                        "type": "integer"
+                    },
+                    "Freight": {
+                        "type": "number"
+                    },
+                    "ShipName": {
+                        "type": "string"
+                    },
+                    "ShipAddress": {
+                        "type": "string"
+                    },
+                    "ShipCity": {
+                        "type": "string"
+                    },
+                    "ShipRegion": {
+                        "type": "string"
+                    },
+                    "ShipPostalCode": {
+                        "type": "string"
+                    },
+                    "ShipCountry": {
+                        "type": "string"
+                    },
+                    "CompanyName": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "City": {
+                        "type": "string"
+                    },
+                    "Region": {
+                        "type": "string"
+                    },
+                    "PostalCode": {
+                        "type": "string"
+                    },
+                    "Country": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Product_Sales_for_1997": {
+                "type": "object",
+                "properties": {
+                    "CategoryName": {
+                        "type": "string"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "ProductSales": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Products_Above_Average_Price": {
+                "type": "object",
+                "properties": {
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "UnitPrice": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Products_by_Category": {
+                "type": "object",
+                "properties": {
+                    "CategoryName": {
+                        "type": "string"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "QuantityPerUnit": {
+                        "type": "string"
+                    },
+                    "UnitsInStock": {
+                        "type": "integer"
+                    },
+                    "Discontinued": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Sales_by_Category": {
+                "type": "object",
+                "properties": {
+                    "CategoryID": {
+                        "type": "integer"
+                    },
+                    "CategoryName": {
+                        "type": "string"
+                    },
+                    "ProductName": {
+                        "type": "string"
+                    },
+                    "ProductSales": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Sales_Totals_by_Amount": {
+                "type": "object",
+                "properties": {
+                    "SaleAmount": {
+                        "type": "number"
+                    },
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "CompanyName": {
+                        "type": "string"
+                    },
+                    "ShippedDate": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Summary_of_Sales_by_Quarter": {
+                "type": "object",
+                "properties": {
+                    "ShippedDate": {
+                        "type": "string"
+                    },
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "Subtotal": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Summary_of_Sales_by_Year": {
+                "type": "object",
+                "properties": {
+                    "ShippedDate": {
+                        "type": "string"
+                    },
+                    "OrderID": {
+                        "type": "integer"
+                    },
+                    "Subtotal": {
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TripPin Service",
+        "version": "1.0.0",
+        "description": "TripPin Service"
+    },
+    "servers": [
+        {
+            "url": "https://services.odata.org/TripPinRESTierService/",
+            "description": "TripPin Service"
+        }
+    ],
+    "paths": {
+        "/People": {
+            "get": {
+                "summary": "Get a list of People",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of People",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Person"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/People/{UserName}": {
+            "get": {
+                "summary": "Get a single People by UserName",
+                "parameters": [
+                    {
+                        "name": "UserName",
+                        "in": "path",
+                        "required": true,
+                        "description": "UserName of the People to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of People",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Person"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Airlines": {
+            "get": {
+                "summary": "Get a list of Airlines",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Airlines",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Airline"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Airlines/{AirlineCode}": {
+            "get": {
+                "summary": "Get a single Airlines by AirlineCode",
+                "parameters": [
+                    {
+                        "name": "AirlineCode",
+                        "in": "path",
+                        "required": true,
+                        "description": "AirlineCode of the Airlines to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Airlines",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Airline"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Airports": {
+            "get": {
+                "summary": "Get a list of Airports",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Airports",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Airport"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Airports/{IcaoCode}": {
+            "get": {
+                "summary": "Get a single Airports by IcaoCode",
+                "parameters": [
+                    {
+                        "name": "IcaoCode",
+                        "in": "path",
+                        "required": true,
+                        "description": "IcaoCode of the Airports to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Airports",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Airport"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Person": {
+                "type": "object",
+                "properties": {
+                    "UserName": {
+                        "type": "string"
+                    },
+                    "FirstName": {
+                        "type": "string"
+                    },
+                    "LastName": {
+                        "type": "string"
+                    },
+                    "MiddleName": {
+                        "type": "string"
+                    },
+                    "Gender": {
+                        "type": "string"
+                    },
+                    "Age": {
+                        "type": "string"
+                    },
+                    "Emails": {
+                        "type": "string"
+                    },
+                    "AddressInfo": {
+                        "type": "string"
+                    },
+                    "HomeAddress": {
+                        "type": "string"
+                    },
+                    "FavoriteFeature": {
+                        "type": "string"
+                    },
+                    "Features": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Airline": {
+                "type": "object",
+                "properties": {
+                    "AirlineCode": {
+                        "type": "string"
+                    },
+                    "Name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Airport": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "IcaoCode": {
+                        "type": "string"
+                    },
+                    "IataCode": {
+                        "type": "string"
+                    },
+                    "Location": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Trip": {
+                "type": "object",
+                "properties": {
+                    "TripId": {
+                        "type": "integer"
+                    },
+                    "ShareId": {
+                        "type": "string"
+                    },
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Budget": {
+                        "type": "number"
+                    },
+                    "Description": {
+                        "type": "string"
+                    },
+                    "Tags": {
+                        "type": "string"
+                    },
+                    "StartsAt": {
+                        "type": "string"
+                    },
+                    "EndsAt": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PlanItem": {
+                "type": "object",
+                "properties": {
+                    "PlanItemId": {
+                        "type": "integer"
+                    },
+                    "ConfirmationCode": {
+                        "type": "string"
+                    },
+                    "StartsAt": {
+                        "type": "string"
+                    },
+                    "EndsAt": {
+                        "type": "string"
+                    },
+                    "Duration": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Event": {
+                "type": "object",
+                "properties": {
+                    "OccursAt": {
+                        "type": "string"
+                    },
+                    "Description": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PublicTransportation": {
+                "type": "object",
+                "properties": {
+                    "SeatNumber": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Flight": {
+                "type": "object",
+                "properties": {
+                    "FlightNumber": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Employee": {
+                "type": "object",
+                "properties": {
+                    "Cost": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Manager": {
+                "type": "object",
+                "properties": {
+                    "Budget": {
+                        "type": "string"
+                    },
+                    "BossOffice": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

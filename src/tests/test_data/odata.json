@@ -1,0 +1,498 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "OData Service",
+        "version": "1.0.0",
+        "description": "OData Service"
+    },
+    "servers": [
+        {
+            "url": "https://services.odata.org/V3/OData/OData.svc/",
+            "description": "OData Service"
+        }
+    ],
+    "paths": {
+        "/Products": {
+            "get": {
+                "summary": "Get a list of Products",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Products",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Product"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Products({ID})": {
+            "get": {
+                "summary": "Get a single Products by ID",
+                "parameters": [
+                    {
+                        "name": "ID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the Products to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Products",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Product"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ProductDetails": {
+            "get": {
+                "summary": "Get a list of ProductDetails",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of ProductDetails",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ProductDetail"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ProductDetails({ProductID})": {
+            "get": {
+                "summary": "Get a single ProductDetails by ProductID",
+                "parameters": [
+                    {
+                        "name": "ProductID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ProductID of the ProductDetails to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of ProductDetails",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductDetail"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Categories": {
+            "get": {
+                "summary": "Get a list of Categories",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Categories({ID})": {
+            "get": {
+                "summary": "Get a single Categories by ID",
+                "parameters": [
+                    {
+                        "name": "ID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the Categories to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Category"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Suppliers": {
+            "get": {
+                "summary": "Get a list of Suppliers",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Suppliers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Supplier"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Suppliers({ID})": {
+            "get": {
+                "summary": "Get a single Suppliers by ID",
+                "parameters": [
+                    {
+                        "name": "ID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the Suppliers to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Suppliers",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Supplier"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Persons": {
+            "get": {
+                "summary": "Get a list of Persons",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Persons",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Person"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Persons({ID})": {
+            "get": {
+                "summary": "Get a single Persons by ID",
+                "parameters": [
+                    {
+                        "name": "ID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the Persons to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Persons",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Person"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PersonDetails": {
+            "get": {
+                "summary": "Get a list of PersonDetails",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of PersonDetails",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PersonDetail"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/PersonDetails({PersonID})": {
+            "get": {
+                "summary": "Get a single PersonDetails by PersonID",
+                "parameters": [
+                    {
+                        "name": "PersonID",
+                        "in": "path",
+                        "required": true,
+                        "description": "PersonID of the PersonDetails to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of PersonDetails",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDetail"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Advertisements": {
+            "get": {
+                "summary": "Get a list of Advertisements",
+                "responses": {
+                    "200": {
+                        "description": "Successful response with a list of Advertisements",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Advertisement"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Advertisements({ID})": {
+            "get": {
+                "summary": "Get a single Advertisements by ID",
+                "parameters": [
+                    {
+                        "name": "ID",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the Advertisements to fetch",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response with details of Advertisements",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Advertisement"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Product": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Description": {
+                        "type": "string"
+                    },
+                    "ReleaseDate": {
+                        "type": "string"
+                    },
+                    "DiscontinuedDate": {
+                        "type": "string"
+                    },
+                    "Rating": {
+                        "type": "integer"
+                    },
+                    "Price": {
+                        "type": "string"
+                    }
+                }
+            },
+            "FeaturedProduct": {
+                "type": "object",
+                "properties": {}
+            },
+            "ProductDetail": {
+                "type": "object",
+                "properties": {
+                    "ProductID": {
+                        "type": "integer"
+                    },
+                    "Details": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Supplier": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Location": {
+                        "type": "string"
+                    },
+                    "Concurrency": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "Person": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Customer": {
+                "type": "object",
+                "properties": {
+                    "TotalExpense": {
+                        "type": "number"
+                    }
+                }
+            },
+            "Employee": {
+                "type": "object",
+                "properties": {
+                    "EmployeeID": {
+                        "type": "string"
+                    },
+                    "HireDate": {
+                        "type": "string"
+                    },
+                    "Salary": {
+                        "type": "number"
+                    }
+                }
+            },
+            "PersonDetail": {
+                "type": "object",
+                "properties": {
+                    "PersonID": {
+                        "type": "integer"
+                    },
+                    "Age": {
+                        "type": "string"
+                    },
+                    "Gender": {
+                        "type": "boolean"
+                    },
+                    "Phone": {
+                        "type": "string"
+                    },
+                    "Address": {
+                        "type": "string"
+                    },
+                    "Photo": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Advertisement": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "string"
+                    },
+                    "Name": {
+                        "type": "string"
+                    },
+                    "AirDate": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
