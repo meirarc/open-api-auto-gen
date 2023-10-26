@@ -1,12 +1,11 @@
 """ This script generates an OpenAPI specification for the Northwind OData service."""
-import json
 import os
+import json
 import xml.etree.ElementTree as ET
 
 import requests
 
-# Define the Northwind OData service URL
-
+# List of OData services to generate OpenAPI specifications for
 cases = [
     {
         "SERVICE_URL": "https://services.odata.org/V2/Northwind/Northwind.svc/",
@@ -30,6 +29,7 @@ cases = [
 
 
 def process_data(case):
+    """Generates an OpenAPI specification for the OData service."""
 
     metadata_url = f'{case["SERVICE_URL"]}$metadata'
 
@@ -183,5 +183,11 @@ def process_data(case):
         json.dump(openapi_spec, file, indent=4)
 
 
-for case in cases:
-    process_data(case)
+def main():
+    """Generates an OpenAPI specification for the OData service."""
+    for case in cases:
+        process_data(case)
+
+
+if __name__ == "__main__":
+    main()
